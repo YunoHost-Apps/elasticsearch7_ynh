@@ -21,8 +21,6 @@ ynh_script_progression "Setting up source files..."
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:$app "$install_dir"
 #=================================================
 # ADD CONFIGURATIONS
 #=================================================
@@ -30,9 +28,6 @@ ynh_script_progression "Adding the configuration files..."
 
 ynh_config_add --template="elasticsearch.yml" --destination="$install_dir/config/elasticsearch.yml"
 ynh_config_add --template="jvm.options" --destination="$install_dir/config/jvm.options.d/yunohost.options"
-
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 400 "$install_dir/config/elasticsearch.yml" "$install_dir/config/jvm.options.d/yunohost.options"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown $app:$app "$install_dir/config/elasticsearch.yml" "$install_dir/config/jvm.options.d/yunohost.options"
 
 #=================================================
 # INCREASE MAX_MAP_COUNT
