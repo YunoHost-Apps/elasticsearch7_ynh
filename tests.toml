@@ -7,3 +7,6 @@ test_format = 1.0
     # ------------
     # Tests to run
     # ------------
+
+    args.xms="256m"
+    args.xmx="1g"
