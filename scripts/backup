@@ -19,22 +19,12 @@ ynh_backup "$install_dir"
 ynh_backup "$data_dir"
 
 #=================================================
-# SPECIFIC BACKUP
-#=================================================
 # BACKUP LOGROTATE
 #=================================================
 
 ynh_backup "/etc/logrotate.d/$app"
 
-#=================================================
-# BACKUP VARIOUS FILES
-#=================================================
-
 ynh_backup "/etc/sysctl.d/90-max_map_count-elasticsearch.conf"
-
-#=================================================
-# BACKUP SYSTEMD
-#=================================================
 
 ynh_backup "/etc/systemd/system/$app.service"
 
