@@ -36,9 +36,9 @@ ram.runtime = "50M"
 [resources]
     [resources.sources.main]
     arm64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-9.2.3-linux-aarch64.tar.gz"
-    arm64.sha256 = "f1fc8e21c034ceb5e725b24107bff0e8af05ff47ab92bf77c6a3ada90084a111"
+    arm64.sha256 = "63776a188d1ff7c963f8f48062a8bccf5d50657fc122f692809b365900b1c26c"
     amd64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-9.2.3-linux-x86_64.tar.gz"
-    amd64.sha256 = "e38938059bac6020de17be3a8804a25e55f40a5adc2edf2eda3e23897a2545e2"
+    amd64.sha256 = "beb8793d30d6e5f6f49fa0e9f1a9d9b01a7eb7ecd535b494c38492f9e1111275"
 
     [resources.system_user]
 
