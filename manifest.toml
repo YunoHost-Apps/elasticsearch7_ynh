@@ -7,7 +7,7 @@ name = "ElasticSearch 7"
 description.en = "Distributed and RESTful search engine"
 description.fr = "Moteur de recherche RESTful"
 
-version = "7.17.8~ynh7"
+version = "9.2.3~ynh1"
 
 maintainers = ["fflorent"]
 
@@ -19,12 +19,12 @@ admindoc = "https://www.elastic.co/guide/en/elasticsearch/reference/7.17/elastic
 code = "https://github.com/elastic/elasticsearch"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 12.1.17"
+helpers_version = "2.1"
 architectures = ["amd64", "arm64"]
 multi_instance = true
 
 ldap = "not_relevant"
-
 sso = "not_relevant"
 
 disk = "50M"
@@ -35,15 +35,10 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    arm64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.8-linux-aarch64.tar.gz"
-    arm64.sha256 = "47d6532a16e02b92208a0d71289a6fb021542c925ed868e49237032bc3ab5c6a"
-    amd64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.8-linux-x86_64.tar.gz"
-    amd64.sha256 = "1c40ba4e0912da1432cb85c0d246f68e14a7da249feea91752c8eaeb28adf0ac"
-
-    # This is only for notification purposes! Generated PRs will be invalid.
-    autoupdate.strategy = "latest_github_release"
-    autoupdate.asset.amd64 = "tarball"
-    autoupdate.asset.arm64 = "tarball"
+    arm64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-9.2.3-linux-aarch64.tar.gz"
+    arm64.sha256 = "63776a188d1ff7c963f8f48062a8bccf5d50657fc122f692809b365900b1c26c"
+    amd64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-9.2.3-linux-x86_64.tar.gz"
+    amd64.sha256 = "beb8793d30d6e5f6f49fa0e9f1a9d9b01a7eb7ecd535b494c38492f9e1111275"
 
     [resources.system_user]
 
